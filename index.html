@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IBM Web Development Labs | HTML CSS JavaScript Portfolio | Vagner Bellacosa</title>
+
+<meta name="description"
+content="Portal contendo todos os laboratórios, exercícios e projetos desenvolvidos durante o curso IBM Introduction to Web Development with HTML, CSS and JavaScript.">
+
+<meta name="keywords"
+content="HTML5,CSS3,JavaScript,Bootstrap,Tailwind,IBM,Coursera,Skills Network,Portfolio,Flexbox,Responsive Design,DOM,API,Web Development">
+
+<meta name="author"
+content="Vagner Bellacosa">
+
+<meta name="robots"
+content="index,follow">
+
+<meta name="theme-color"
+content="#0f172a">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:title"
+content="IBM Web Development Labs">
+
+<meta property="og:description"
+content="Coleção completa dos laboratórios e projetos desenvolvidos durante o curso IBM Web Development.">
+
+<meta property="og:image"
+content="images/banner.png">
+
+<meta property="og:locale"
+content="pt_BR">
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="IBM Web Development Labs">
+
+<meta name="twitter:description"
+content="HTML5 • CSS3 • JavaScript • Bootstrap • Tailwind">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+
+background:
+
+linear-gradient(
+135deg,
+#020617,
+#0f172a,
+#1e293b);
+
+color:#ffffff;
+
+min-height:100vh;
+
+}
+
+/************************************************/
+
+header{
+
+position:sticky;
+top:0;
+
+z-index:999;
+
+backdrop-filter:blur(20px);
+
+background:rgba(15,23,42,.85);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+padding:25px;
+
+}
+
+/************************************************/
+
+.logo{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#38bdf8;
+
+}
+
+.logo span{
+
+color:#ffffff;
+
+}
+
+/************************************************/
+
+.subtitle{
+
+margin-top:8px;
+
+font-size:15px;
+
+color:#cbd5e1;
+
+}
+
+/************************************************/
+
+.stats{
+
+margin-top:20px;
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+/************************************************/
+
+.badge{
+
+background:#1e293b;
+
+padding:10px 18px;
+
+border-radius:40px;
+
+font-size:14px;
+
+border:1px solid #334155;
+
+}
+
+/************************************************/
+
+.search{
+
+margin-top:25px;
+
+}
+
+.search input{
+
+width:100%;
+
+padding:16px;
+
+border-radius:14px;
+
+outline:none;
+
+border:none;
+
+font-size:16px;
+
+background:#1e293b;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.search input:focus{
+
+background:#334155;
+
+}
+
+/************************************************/
+
+main{
+
+padding:50px;
+
+}
+
+/************************************************/
+
+.section-title{
+
+font-size:32px;
+
+margin-bottom:10px;
+
+color:#38bdf8;
+
+}
+
+.section-text{
+
+margin-bottom:35px;
+
+color:#cbd5e1;
+
+line-height:1.8;
+
+}
+
+/************************************************/
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(370px,1fr));
+
+gap:30px;
+
+}
+
+/************************************************/
+
+.card{
+
+background:
+
+rgba(255,255,255,.05);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:18px;
+
+overflow:hidden;
+
+transition:.35s;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 20px 50px rgba(56,189,248,.25);
+
+}
+
+/************************************************/
+
+.card-header{
+
+padding:22px;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+/************************************************/
+
+.card-title{
+
+font-size:22px;
+
+font-weight:600;
+
+}
+
+/************************************************/
+
+.tech{
+
+display:flex;
+
+gap:8px;
+
+flex-wrap:wrap;
+
+}
+
+.tech span{
+
+background:#0ea5e9;
+
+padding:4px 12px;
+
+font-size:12px;
+
+border-radius:20px;
+
+}
+
+/************************************************/
+
+.preview{
+
+height:260px;
+
+background:#ffffff;
+
+}
+
+.preview iframe{
+
+width:100%;
+
+height:100%;
+
+border:none;
+
+background:white;
+
+}
+
+/************************************************/
+
+.card-footer{
+
+padding:18px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+/************************************************/
+
+.button{
+
+text-decoration:none;
+
+padding:12px 22px;
+
+border-radius:12px;
+
+background:#0ea5e9;
+
+color:white;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.button:hover{
+
+background:#0284c7;
+
+}
+
+/************************************************/
+
+.tag{
+
+color:#94a3b8;
+
+font-size:14px;
+
+}
+
+/************************************************/
+
+footer{
+
+margin-top:80px;
+
+padding:45px;
+
+text-align:center;
+
+color:#94a3b8;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/************************************************/
+
+@media(max-width:768px){
+
+main{
+
+padding:20px;
+
+}
+
+.logo{
+
+font-size:28px;
+
+}
+
+.section-title{
+
+font-size:26px;
+
+}
+
+.preview{
+
+height:210px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+IBM <span>Web Development Labs</span>
+
+</div>
+
+<div class="subtitle">
+
+HTML5 • CSS3 • JavaScript • Bootstrap • Tailwind CSS • IBM Skills Network • Coursera
+
+</div>
+
+<div class="stats">
+
+<div class="badge">
+📁 23 Projetos
+</div>
+
+<div class="badge">
+💻 HTML5
+</div>
+
+<div class="badge">
+🎨 CSS3
+</div>
+
+<div class="badge">
+⚙ JavaScript
+</div>
+
+<div class="badge">
+📱 Responsive
+</div>
+
+<div class="badge">
+🚀 Bootstrap
+</div>
+
+<div class="badge">
+💨 Tailwind
+</div>
+
+</div>
+
+<div class="search">
+
+<input
+type="text"
+id="searchBox"
+placeholder="Pesquisar projeto...">
+
+</div>
+
+</header>
+
+<main>
+
+<h1 class="section-title">
+
+Meu Portfólio de Laboratórios
+
+</h1>
+
+<p class="section-text">
+
+Esta página reúne todos os exercícios, laboratórios e projetos desenvolvidos durante o curso <strong>Introduction to Web Development with HTML, CSS and JavaScript</strong> da IBM Skills Network. Cada cartão abaixo apresenta uma prévia interativa do projeto por meio de um <code>&lt;iframe&gt;</code>, permitindo visualizar rapidamente o conteúdo antes de abri-lo em uma nova aba.
+
+</p>
+
+<div class="grid" id="projects">
+
+<!-- ========================= -->
+<!-- HTML5 -->
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Elements HTML5</div>
+<div class="tech">
+<span>HTML5</span>
+<span>Semantics</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="Elements.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">HTML5 Elements</span>
+<a class="button" href="Elements.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">My Web Page</div>
+<div class="tech">
+<span>HTML</span>
+<span>CSS</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="mywebpage.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Página HTML</span>
+<a class="button" href="mywebpage.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Layout Demo</div>
+<div class="tech">
+<span>Layout</span>
+<span>HTML</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="layout.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Estrutura HTML</span>
+<a class="button" href="layout.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Fieldset & Legend</div>
+<div class="tech">
+<span>Forms</span>
+<span>HTML5</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="fieldset-legend-demo.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Formulários</span>
+<a class="button" href="fieldset-legend-demo.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">HTML5 Playground</div>
+<div class="tech">
+<span>HTML5</span>
+<span>Lab</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="html5-playground/index.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Playground</span>
+<a class="button" href="html5-playground/index.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">HTML5 Fundamentals</div>
+<div class="tech">
+<span>HTML5</span>
+<span>IBM</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="html5-fundamentals-lab/index.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Fundamentos</span>
+<a class="button" href="html5-fundamentals-lab/index.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+<!-- CSS -->
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">CSS Selectors</div>
+<div class="tech">
+<span>CSS</span>
+<span>Selectors</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="css-selectors-demo.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Seletores CSS</span>
+<a class="button" href="css-selectors-demo.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">CSS3 Selectors</div>
+<div class="tech">
+<span>CSS3</span>
+<span>Advanced</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="CSS3Selectors.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">CSS3</span>
+<a class="button" href="CSS3Selectors.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Flexbox</div>
+<div class="tech">
+<span>Flexbox</span>
+<span>CSS</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="flexbox.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Layout Flex</span>
+<a class="button" href="flexbox.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Flexbox Set</div>
+<div class="tech">
+<span>Flexbox</span>
+<span>Exercises</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="FlexboxSet.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Exercícios</span>
+<a class="button" href="FlexboxSet.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">CSS Flexbox Lab</div>
+<div class="tech">
+<span>IBM</span>
+<span>Lab</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="css-flexbox-lab/index.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Laboratório</span>
+<a class="button" href="css-flexbox-lab/index.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+<!-- Bootstrap -->
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Bootstrap Demo</div>
+<div class="tech">
+<span>Bootstrap</span>
+<span>Responsive</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="bootstrap.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Bootstrap 5</span>
+<a class="button" href="bootstrap.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+<!-- Tailwind -->
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Tailwind CSS</div>
+<div class="tech">
+<span>Tailwind</span>
+<span>Responsive</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="tailwind.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Utility First</span>
+<a class="button" href="tailwind.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+<!-- JavaScript -->
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">JavaScript Skills</div>
+<div class="tech">
+<span>JavaScript</span>
+<span>DOM</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="JavaScriptSkills.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">JavaScript</span>
+<a class="button" href="JavaScriptSkills.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Browser Console</div>
+<div class="tech">
+<span>JavaScript</span>
+<span>Console</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="BrowserConsole.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Developer Tools</span>
+<a class="button" href="BrowserConsole.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Geolocation API</div>
+<div class="tech">
+<span>API</span>
+<span>GPS</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="Geolocation.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Navigator API</span>
+<a class="button" href="Geolocation.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">JavaScript Console Lab</div>
+<div class="tech">
+<span>Lab</span>
+<span>Console</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="javascript-browser-console-lab/index.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">IBM Lab</span>
+<a class="button" href="javascript-browser-console-lab/index.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Unit Converter</div>
+<div class="tech">
+<span>JavaScript</span>
+<span>Calculator</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="unit-converter/index.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Conversor</span>
+<a class="button" href="unit-converter/index.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+<!-- Projetos -->
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Thomas Watson Museum</div>
+<div class="tech">
+<span>Museum</span>
+<span>HTML5</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="thomas-watson-digital-museum/index.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Projeto</span>
+<a class="button" href="thomas-watson-digital-museum/index.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Final Project</div>
+<div class="tech">
+<span>Portfolio</span>
+<span>IBM</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="FinalProject/index.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Projeto Final</span>
+<a class="button" href="FinalProject/index.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">Final Project 2.0</div>
+<div class="tech">
+<span>Portfolio</span>
+<span>HTML5</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="FinalProject2.0/index.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Versão 2</span>
+<a class="button" href="FinalProject2.0/index.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+<!-- ========================= -->
+
+<article class="card searchable">
+
+<div class="card-header">
+<div>
+<div class="card-title">20/20 Complete</div>
+<div class="tech">
+<span>Portfolio</span>
+<span>Complete</span>
+</div>
+</div>
+</div>
+
+<div class="preview">
+<iframe src="finalproject_20of20_complete/index.html" loading="lazy"></iframe>
+</div>
+
+<div class="card-footer">
+<span class="tag">Entrega Final</span>
+<a class="button" href="finalproject_20of20_complete/index.html" target="_blank">
+Abrir Projeto
+</a>
+</div>
+
+</article>
+
+</div>
+
+<button id="topButton" title="Voltar ao topo">
+⬆
+</button>
+
+<footer>
+
+<h2>IBM Web Development Labs</h2>
+
+<p>
+
+Portal contendo todos os exercícios, laboratórios e projetos desenvolvidos durante o curso
+
+<strong>Introduction to Web Development with HTML, CSS and JavaScript</strong>
+
+da IBM Skills Network.
+
+</p>
+
+<p>
+
+HTML5 • CSS3 • JavaScript • Bootstrap • Tailwind CSS • Responsive Design • DOM • APIs
+
+</p>
+
+<p>
+
+© 2026 Vagner Bellacosa
+
+</p>
+
+</footer>
+
+<script>
+
+/****************************************************/
+/* CONTADOR AUTOMÁTICO                              */
+/****************************************************/
+
+const cards =
+document.querySelectorAll(".card");
+
+const badge =
+document.querySelector(".badge");
+
+if(badge){
+
+badge.innerHTML=
+`📁 ${cards.length} Projetos`;
+
+}
+
+/****************************************************/
+/* PESQUISA EM TEMPO REAL                           */
+/****************************************************/
+
+const search =
+document.getElementById("searchBox");
+
+search.addEventListener("keyup",function(){
+
+const value =
+this.value.toLowerCase();
+
+cards.forEach(function(card){
+
+const text =
+card.innerText.toLowerCase();
+
+if(text.indexOf(value)>-1){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+});
+
+/****************************************************/
+/* SCROLL SUAVE                                     */
+/****************************************************/
+
+document.querySelectorAll("a[href^='#']")
+.forEach(function(anchor){
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=
+document.querySelector(
+this.getAttribute("href")
+);
+
+if(target){
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+/****************************************************/
+/* BOTÃO VOLTAR AO TOPO                             */
+/****************************************************/
+
+const topButton =
+document.getElementById("topButton");
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>400){
+
+topButton.style.opacity="1";
+
+topButton.style.visibility="visible";
+
+}else{
+
+topButton.style.opacity="0";
+
+topButton.style.visibility="hidden";
+
+}
+
+});
+
+topButton.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+/****************************************************/
+/* ANIMAÇÃO DE ENTRADA                              */
+/****************************************************/
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("visible");
+
+}
+
+});
+
+},
+
+{
+
+threshold:.15
+
+}
+
+);
+
+cards.forEach(card=>{
+
+observer.observe(card);
+
+});
+
+/****************************************************/
+/* CARDS */
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(60px)";
+
+card.style.transition="all .7s ease";
+
+});
+
+const style=
+document.createElement("style");
+
+style.innerHTML=`
+
+.visible{
+
+opacity:1!important;
+
+transform:translateY(0)!important;
+
+}
+
+`;
+
+document.head.appendChild(style);
+
+/****************************************************/
+/* HOVER NOS IFRAMES                                */
+/****************************************************/
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px) scale(1.01)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px)";
+
+});
+
+});
+
+/****************************************************/
+/* CONTADOR DE VISITAS (LOCAL)                      */
+/****************************************************/
+
+let visits=
+
+localStorage.getItem("portal-visits");
+
+if(!visits){
+
+visits=1;
+
+}else{
+
+visits++;
+
+}
+
+localStorage.setItem(
+
+"portal-visits",
+
+visits
+
+);
+
+console.log(
+
+"Visitas:",
+
+visits
+
+);
+
+/****************************************************/
+/* CARREGAMENTO DOS IFRAMES                         */
+/****************************************************/
+
+const iframes=
+
+document.querySelectorAll("iframe");
+
+iframes.forEach(frame=>{
+
+frame.loading="lazy";
+
+});
+
+/****************************************************/
+/* DUPLO CLIQUE PARA TELA CHEIA                     */
+/****************************************************/
+
+iframes.forEach(frame=>{
+
+frame.addEventListener(
+
+"dblclick",
+
+function(){
+
+window.open(
+
+this.src,
+
+"_blank"
+
+);
+
+}
+
+);
+
+});
+
+/****************************************************/
+/* ATALHO CTRL+K                                    */
+/****************************************************/
+
+document.addEventListener(
+
+"keydown",
+
+function(e){
+
+if(e.ctrlKey && e.key==="k"){
+
+e.preventDefault();
+
+search.focus();
+
+}
+
+}
+
+/****************************************************/
+/* TECLA ESC LIMPA PESQUISA                         */
+/****************************************************/
+
+);
+
+document.addEventListener(
+
+"keydown",
+
+function(e){
+
+if(e.key==="Escape"){
+
+search.value="";
+
+search.dispatchEvent(
+
+new Event("keyup")
+
+);
+
+}
+
+});
+
+/****************************************************/
+/* INFORMAÇÕES NO CONSOLE                           */
+/****************************************************/
+
+console.log(
+
+"%cIBM Web Development Labs",
+
+"font-size:22px;color:#38bdf8;font-weight:bold;"
+
+);
+
+console.log(
+
+"Projetos:",
+
+cards.length
+
+);
+
+console.log(
+
+"HTML5");
+
+console.log(
+
+"CSS3");
+
+console.log(
+
+"JavaScript");
+
+console.log(
+
+"Bootstrap");
+
+console.log(
+
+"Tailwind CSS");
+
+console.log(
+
+"DOM");
+
+console.log(
+
+"Responsive Design");
+
+/****************************************************/
+/* DATA E HORA                                      */
+/****************************************************/
+
+const today=
+
+new Date();
+
+console.log(
+
+today.toLocaleString()
+
+);
+
+/****************************************************/
+/* COPYRIGHT DINÂMICO                               */
+/****************************************************/
+
+document.querySelector(
+
+"footer p:last-child"
+
+).innerHTML=
+
+"© "+today.getFullYear()+" Vagner Bellacosa";
+
+/****************************************************/
+/* FIM DO SCRIPT                                    */
+/****************************************************/
+
+</script>
+
+<!-- ===================================================== -->
+<!-- SEO Estruturado (Schema.org)                          -->
+<!-- ===================================================== -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"IBM Web Development Labs",
+  "alternateName":"IBM Skills Network Portfolio",
+  "url":"https://vagnerbellacosa.github.io/",
+  "author":{
+      "@type":"Person",
+      "name":"Vagner Bellacosa"
+  },
+  "publisher":{
+      "@type":"Person",
+      "name":"Vagner Bellacosa"
+  },
+  "description":"Portal contendo todos os exercícios e projetos do curso IBM Introduction to Web Development with HTML CSS JavaScript.",
+  "inLanguage":"pt-BR",
+  "keywords":[
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Tailwind",
+      "IBM",
+      "Portfolio",
+      "Responsive",
+      "DOM",
+      "API"
+  ]
+}
+</script>
+
+<!-- ===================================================== -->
+<!-- FAQ SEO                                               -->
+<!-- ===================================================== -->
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+
+{
+"@type":"Question",
+"name":"O que este portal apresenta?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Uma coleção de exercícios, laboratórios e projetos do curso IBM Introduction to Web Development."
+}
+},
+
+{
+"@type":"Question",
+"name":"Quais tecnologias foram utilizadas?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"HTML5, CSS3, JavaScript, Tailwind CSS, Bootstrap e APIs JavaScript."
+}
+},
+
+{
+"@type":"Question",
+"name":"Os projetos são responsivos?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"Sim. Todos utilizam Responsive Design para desktop, tablet e smartphone."
+}
+}
+
+]
+}
+</script>
+
+<!-- ===================================================== -->
+<!-- Performance                                           -->
+<!-- ===================================================== -->
+
+<script>
+
+window.addEventListener("load",()=>{
+
+console.log("Portal carregado com sucesso.");
+
+if("serviceWorker" in navigator){
+
+console.log("Service Worker suportado.");
+
+}
+
+});
+
+</script>
+
+<!-- ===================================================== -->
+<!-- Melhorias de acessibilidade                           -->
+<!-- ===================================================== -->
+
+<script>
+
+document.querySelectorAll("iframe").forEach((frame,index)=>{
+
+frame.setAttribute(
+"title",
+"Preview Projeto "+(index+1)
+);
+
+});
+
+document.querySelectorAll("img").forEach(img=>{
+
+if(!img.alt){
+
+img.alt="Imagem ilustrativa";
+
+}
+
+});
+
+</script>
+
+<!-- ===================================================== -->
+<!-- Estatísticas                                          -->
+<!-- ===================================================== -->
+
+<script>
+
+const totalCards=
+document.querySelectorAll(".card").length;
+
+const totalIframes=
+document.querySelectorAll("iframe").length;
+
+console.table({
+
+Projetos:totalCards,
+Embeds:totalIframes,
+Versao:"1.0",
+Autor:"Vagner Bellacosa"
+
+});
+
+</script>
+
+<!-- ===================================================== -->
+<!-- Rodapé Console                                        -->
+<!-- ===================================================== -->
+
+<script>
+
+console.log(
+"%cObrigado por visitar o Portal IBM Labs!",
+"color:#22c55e;font-size:18px;font-weight:bold;"
+);
+
+console.log(
+"%cHTML5 • CSS3 • JavaScript • Bootstrap • Tailwind",
+"color:#38bdf8;font-size:14px;"
+);
+
+</script>
+
+<!-- ===================================================== -->
+<!-- FIM                                                   -->
+<!-- ===================================================== -->
+
+</body>
+</html>
+
+
+
+

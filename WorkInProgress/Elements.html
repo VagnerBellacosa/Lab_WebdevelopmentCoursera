@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML Fieldset & Legend - Complete Demonstration</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef2f7;
+    color:#333;
+    padding:30px;
+    line-height:1.6;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    margin-bottom:30px;
+}
+
+section{
+    background:white;
+    margin-bottom:30px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h2{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+p{
+    margin-bottom:15px;
+}
+
+.code{
+    background:#1e1e1e;
+    color:#00ff88;
+    padding:15px;
+    border-radius:8px;
+    font-family:Consolas;
+    overflow:auto;
+    margin:20px 0;
+}
+
+form{
+    margin-top:20px;
+}
+
+fieldset{
+    border:2px solid #0d6efd;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:25px;
+}
+
+legend{
+    background:#0d6efd;
+    color:white;
+    padding:8px 18px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #bbb;
+    border-radius:6px;
+
+}
+
+button{
+
+    margin-top:20px;
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:6px;
+    cursor:pointer;
+
+}
+
+button:hover{
+    background:#084298;
+}
+
+.demo-box{
+    background:#fff8dc;
+    border-left:6px solid orange;
+    padding:15px;
+    margin-top:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table,th,td{
+    border:1px solid #ccc;
+}
+
+th{
+    background:#0d6efd;
+    color:white;
+}
+
+th,td{
+    padding:10px;
+}
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>HTML Fieldset & Legend</h1>
+
+<p>
+Complete demonstration of the HTML <strong>&lt;fieldset&gt;</strong> and
+<strong>&lt;legend&gt;</strong> elements.
+</p>
+
+</header>
+
+<section>
+
+<h2>What is a Fieldset?</h2>
+
+<p>
+
+The <strong>&lt;fieldset&gt;</strong> element groups related controls
+inside a form, improving organization and accessibility.
+
+</p>
+
+<div class="demo-box">
+
+✔ Organizes forms<br>
+✔ Improves readability<br>
+✔ Can contain any HTML elements<br>
+✔ Frequently used with input controls
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Fieldset Syntax</h2>
+
+<div class="code">
+
+&lt;fieldset&gt;
+
+&nbsp;&nbsp;Contents...
+
+&lt;/fieldset&gt;
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Fieldset Attributes</h2>
+
+<table>
+
+<tr>
+
+<th>Attribute</th>
+
+<th>Description</th>
+
+</tr>
+
+<tr>
+
+<td>name</td>
+
+<td>Assigns a name to the fieldset.</td>
+
+</tr>
+
+<tr>
+
+<td>disabled</td>
+
+<td>Disables every control inside the fieldset.</td>
+
+</tr>
+
+<tr>
+
+<td>form</td>
+
+<td>Associates the fieldset with a form.</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Example 1 - Fieldset Without Legend</h2>
+
+<form>
+
+<fieldset name="personal">
+
+<label>First Name</label>
+<input type="text">
+
+<label>Last Name</label>
+<input type="text">
+
+<label>Email</label>
+<input type="email">
+
+<label>Phone</label>
+<input type="tel">
+
+</fieldset>
+
+<fieldset name="professional">
+
+<label>Occupation</label>
+<input type="text">
+
+<label>Company</label>
+<input type="text">
+
+<label>Start Date</label>
+<input type="date">
+
+<label>End Date</label>
+<input type="date">
+
+</fieldset>
+
+<button>Submit</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Example 2 - Fieldset With Legend</h2>
+
+<form>
+
+<fieldset name="personal_details">
+
+<legend>Personal Details</legend>
+
+<label>First Name</label>
+<input type="text">
+
+<label>Last Name</label>
+<input type="text">
+
+<label>Email</label>
+<input type="email">
+
+<label>Phone Number</label>
+<input type="tel">
+
+</fieldset>
+
+<fieldset name="professional_details">
+
+<legend>Professional Details</legend>
+
+<label>Occupation</label>
+<input type="text">
+
+<label>Company</label>
+<input type="text">
+
+<label>Department</label>
+<input type="text">
+
+<label>Start Date</label>
+<input type="date">
+
+<label>End Date</label>
+<input type="date">
+
+</fieldset>
+
+<button>Submit</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Example 3 - Disabled Fieldset</h2>
+
+<form>
+
+<fieldset disabled>
+
+<legend>Disabled Form</legend>
+
+<label>Name</label>
+<input type="text" value="John Doe">
+
+<label>Email</label>
+<input type="email" value="john@email.com">
+
+<label>Comments</label>
+<textarea>This entire fieldset is disabled.</textarea>
+
+</fieldset>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Example 4 - Registration Form</h2>
+
+<form>
+
+<fieldset>
+
+<legend>Account Information</legend>
+
+<label>Username</label>
+<input type="text">
+
+<label>Password</label>
+<input type="password">
+
+<label>Email</label>
+<input type="email">
+
+</fieldset>
+
+<fieldset>
+
+<legend>Personal Information</legend>
+
+<label>Birth Date</label>
+<input type="date">
+
+<label>Country</label>
+
+<select>
+
+<option>Brazil</option>
+<option>USA</option>
+<option>Japan</option>
+<option>Canada</option>
+
+</select>
+
+<label>Biography</label>
+
+<textarea rows="5"></textarea>
+
+</fieldset>
+
+<button>Create Account</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>✔ Fieldset groups related form controls.</li>
+
+<li>✔ Legend provides a title for each group.</li>
+
+<li>✔ Large forms become much easier to read.</li>
+
+<li>✔ Disabled fieldsets disable every control inside.</li>
+
+<li>✔ One form may contain multiple fieldsets.</li>
+
+<li>✔ Improves accessibility and organization.</li>
+
+</ul>
+
+</section>
+
+<footer>
+
+IBM Full Stack Developer • HTML5 Forms • Fieldset & Legend Demo
+
+</footer>
+
+</body>
+</html>

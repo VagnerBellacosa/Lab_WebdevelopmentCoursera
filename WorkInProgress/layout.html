@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Basic Layout</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+header,footer{
+
+    background:red;
+    color:white;
+
+    padding:20px;
+    text-align:center;
+
+}
+
+nav{
+
+    background:blue;
+    color:white;
+
+    padding:20px;
+    text-align:center;
+
+}
+
+.container{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.row{
+
+    display:flex;
+
+}
+
+aside{
+
+    background:gold;
+    width:25%;
+    padding:20px;
+
+}
+
+section{
+
+    background:white;
+    width:50%;
+    padding:20px;
+
+}
+
+article{
+
+    background:lightgreen;
+    width:25%;
+    padding:20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>HEADER</header>
+
+<nav>NAVIGATION</nav>
+
+<div class="container">
+
+<div class="row">
+
+<aside>Aside</aside>
+
+<section>Main Section</section>
+
+<article>Article</article>
+
+</div>
+
+</div>
+
+<footer>Footer</footer>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log('Thomas Watson Digital Museum loaded');

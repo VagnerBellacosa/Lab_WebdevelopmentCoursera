@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geolocation Demo</title>
+</head>
+<body>
+
+<h2>Minha Localização</h2>
+
+<button onclick="getLocation()">
+    Mostrar localização
+</button>
+
+<p id="resultado"></p>
+
+<script>
+function getLocation() {
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(showPosition);
+
+    } else {
+
+        document.getElementById("resultado").innerHTML =
+            "Geolocation não é suportada.";
+
+    }
+}
+
+function showPosition(position) {
+
+    document.getElementById("resultado").innerHTML =
+        "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>

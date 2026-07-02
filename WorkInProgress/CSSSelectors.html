@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSS Selectors Lab - Tags, IDs and Classes</title>
+
+<style>
+
+/* ======================================================
+   TAG SELECTORS
+   ====================================================== */
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f8;
+    margin:0;
+    padding:30px;
+    line-height:1.6;
+}
+
+h1{
+    color:#0d6efd;
+    text-align:center;
+}
+
+h2{
+    color:#198754;
+    border-bottom:2px solid #198754;
+    padding-bottom:5px;
+}
+
+p{
+    color:#444;
+}
+
+/* ======================================================
+   ID SELECTORS
+   ====================================================== */
+
+#header{
+    background:#0d6efd;
+    color:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+}
+
+#important{
+    background:#fff3cd;
+    border-left:8px solid orange;
+    padding:15px;
+    margin-top:20px;
+}
+
+#footer{
+    margin-top:40px;
+    text-align:center;
+    padding:20px;
+    background:#212529;
+    color:white;
+    border-radius:10px;
+}
+
+/* ======================================================
+   CLASS SELECTORS
+   ====================================================== */
+
+.card{
+    background:white;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.highlight{
+    background:gold;
+    padding:3px 8px;
+    border-radius:5px;
+}
+
+.success{
+    color:green;
+    font-weight:bold;
+}
+
+.warning{
+    color:#d35400;
+    font-weight:bold;
+}
+
+.code{
+    background:#222;
+    color:#00ff88;
+    padding:12px;
+    border-radius:8px;
+    font-family:Consolas, monospace;
+    overflow:auto;
+}
+
+.button{
+    display:inline-block;
+    background:#0d6efd;
+    color:white;
+    padding:10px 18px;
+    text-decoration:none;
+    border-radius:6px;
+    margin-top:10px;
+}
+
+.button:hover{
+    background:#084298;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table,th,td{
+    border:1px solid #ccc;
+}
+
+th{
+    background:#0d6efd;
+    color:white;
+}
+
+th,td{
+    padding:10px;
+    text-align:left;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<div id="header">
+
+<h1>Understanding CSS Selectors</h1>
+
+<p>
+Tags • IDs • Classes
+</p>
+
+</div>
+
+<!-- ================= INTRODUCTION ================= -->
+
+<div class="card">
+
+<h2>What are CSS Selectors?</h2>
+
+<p>
+CSS Selectors identify HTML elements and apply styles to them.
+</p>
+
+<ul>
+
+<li><strong>Tag Selector</strong> → Styles every element of the same HTML tag.</li>
+
+<li><strong>ID Selector</strong> → Styles one unique element.</li>
+
+<li><strong>Class Selector</strong> → Styles one or many elements that share the same class.</li>
+
+</ul>
+
+</div>
+
+<!-- ================= TAG SELECTOR ================= -->
+
+<div class="card">
+
+<h2>1. Tag Selectors</h2>
+
+<p>
+
+This paragraph is styled automatically because every
+<strong>&lt;p&gt;</strong> element receives the same CSS.
+
+</p>
+
+<div class="code">
+
+h1{
+color:#0d6efd;
+}
+
+p{
+color:#444;
+}
+
+</div>
+
+</div>
+
+<!-- ================= ID SELECTOR ================= -->
+
+<div class="card">
+
+<h2>2. ID Selectors</h2>
+
+<div id="important">
+
+This box uses the selector
+
+<strong>#important</strong>
+
+because its id is unique.
+
+</div>
+
+<div class="code">
+
+#important{
+
+background:#fff3cd;
+
+padding:15px;
+
+}
+
+</div>
+
+</div>
+
+<!-- ================= CLASS SELECTOR ================= -->
+
+<div class="card">
+
+<h2>3. Class Selectors</h2>
+
+<p>
+
+Classes can be reused many times.
+
+</p>
+
+<p class="success">
+
+✔ HTML is the structure.
+
+</p>
+
+<p class="success">
+
+✔ CSS styles the page.
+
+</p>
+
+<p class="warning">
+
+⚠ JavaScript adds behavior.
+
+</p>
+
+<p>
+
+This word is
+
+<span class="highlight">highlighted</span>
+
+using a CSS class.
+
+</p>
+
+<div class="code">
+
+.highlight{
+
+background:gold;
+
+}
+
+</div>
+
+</div>
+
+<!-- ================= COMPARISON ================= -->
+
+<div class="card">
+
+<h2>Comparison</h2>
+
+<table>
+
+<tr>
+
+<th>Selector</th>
+
+<th>Syntax</th>
+
+<th>Purpose</th>
+
+<th>Can Repeat?</th>
+
+</tr>
+
+<tr>
+
+<td>Tag</td>
+
+<td>h1</td>
+
+<td>Styles every HTML tag</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>ID</td>
+
+<td>#header</td>
+
+<td>Styles one unique element</td>
+
+<td>No</td>
+
+</tr>
+
+<tr>
+
+<td>Class</td>
+
+<td>.card</td>
+
+<td>Reusable style</td>
+
+<td>Yes</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<!-- ================= EXAMPLE ================= -->
+
+<div class="card">
+
+<h2>Combined Example</h2>
+
+<p>
+
+This paragraph uses the
+
+<strong>Tag Selector</strong>.
+
+</p>
+
+<p class="highlight">
+
+This paragraph uses both the Tag Selector and the
+
+<strong>highlight</strong>
+
+Class.
+
+</p>
+
+<div id="important">
+
+This element uses an ID Selector.
+
+</div>
+
+<a href="#" class="button">
+
+Example Button
+
+</a>
+
+</div>
+
+<!-- ================= SUMMARY ================= -->
+
+<div class="card">
+
+<h2>Summary</h2>
+
+<ul>
+
+<li>Tag selectors style all elements of one type.</li>
+
+<li>ID selectors target one unique element.</li>
+
+<li>Class selectors allow reusable styles.</li>
+
+<li>Classes are the most commonly used selectors in modern websites.</li>
+
+<li>Combining selectors makes CSS powerful and maintainable.</li>
+
+</ul>
+
+</div>
+
+<div id="footer">
+
+CSS Selectors Lab • IBM Full Stack Developer • HTML + CSS Demo
+
+</div>
+
+</body>
+</html>

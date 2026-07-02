@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Advanced CSS Properties - Examples</title>
+
+<style>
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    margin:20px;
+    background:#f4f4f4;
+}
+
+section{
+    background:white;
+    margin:25px 0;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+}
+
+.demo{
+    background:#d9ecff;
+    border:1px solid #999;
+    padding:10px;
+    margin:10px 0;
+}
+
+/* text-decoration */
+
+.none{
+    text-decoration:none;
+}
+
+.underline{
+    text-decoration:underline;
+}
+
+.overline{
+    text-decoration:overline;
+}
+
+.line{
+    text-decoration:line-through;
+}
+
+/* font-weight */
+
+.normal{
+    font-weight:normal;
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.light{
+    font-weight:300;
+}
+
+.heavy{
+    font-weight:900;
+}
+
+/* float */
+
+.float-img{
+    float:left;
+    width:120px;
+    height:120px;
+    background:orange;
+    margin-right:15px;
+    text-align:center;
+    line-height:120px;
+    font-size:40px;
+}
+
+.clear{
+    clear:both;
+}
+
+/* border radius */
+
+.radius{
+    width:180px;
+    height:80px;
+    background:#2196f3;
+    color:white;
+    text-align:center;
+    line-height:80px;
+    border-radius:20px;
+}
+
+/* width height */
+
+.box{
+    width:250px;
+    height:80px;
+    background:#4caf50;
+    color:white;
+    text-align:center;
+    line-height:80px;
+}
+
+/* position */
+
+.relative{
+    position:relative;
+    height:120px;
+    background:#eee;
+}
+
+.absolute{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:red;
+    color:white;
+    padding:10px;
+}
+
+.fixed{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:black;
+    color:white;
+    padding:10px;
+}
+
+.sticky{
+    position:sticky;
+    top:0;
+    background:gold;
+    padding:10px;
+}
+
+/* Flexbox */
+
+.flex{
+    display:flex;
+    gap:10px;
+    background:#ddd;
+    padding:10px;
+}
+
+.item{
+    background:#1976d2;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.row{
+    flex-direction:row;
+}
+
+.column{
+    flex-direction:column;
+}
+
+.wrap{
+    flex-wrap:wrap;
+}
+
+.center{
+    justify-content:center;
+}
+
+.between{
+    justify-content:space-between;
+}
+
+.around{
+    justify-content:space-around;
+}
+
+.evenly{
+    justify-content:space-evenly;
+}
+
+.align{
+    height:180px;
+    align-items:center;
+}
+
+.self{
+    align-self:flex-end;
+    background:crimson;
+}
+
+.flow{
+    flex-flow:row wrap;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Advanced CSS Properties</h1>
+
+<div class="sticky">
+Sticky Position Example
+</div>
+
+<section>
+
+<h2>1. text-decoration</h2>
+
+<p class="none">No Decoration</p>
+
+<p class="underline">Underline</p>
+
+<p class="overline">Overline</p>
+
+<p class="line">Line Through</p>
+
+</section>
+
+<section>
+
+<h2>2. font-weight</h2>
+
+<p class="normal">Normal</p>
+
+<p class="bold">Bold</p>
+
+<p class="light">Light (300)</p>
+
+<p class="heavy">Heavy (900)</p>
+
+</section>
+
+<section>
+
+<h2>3. Margin and Padding</h2>
+
+<div class="demo" style="margin:30px;padding:25px;">
+Margin = 30px<br>
+Padding = 25px
+</div>
+
+</section>
+
+<section>
+
+<h2>4. Float</h2>
+
+<div class="float-img">🖼️</div>
+
+<p>
+This text wraps around the floated element.
+Float allows text to flow beside images or boxes.
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</p>
+
+<div class="clear"></div>
+
+</section>
+
+<section>
+
+<h2>5. Border Radius</h2>
+
+<div class="radius">
+Rounded Corners
+</div>
+
+</section>
+
+<section>
+
+<h2>6. Width and Height</h2>
+
+<div class="box">
+250px × 80px
+</div>
+
+</section>
+
+<section>
+
+<h2>7. Position</h2>
+
+<div class="relative">
+
+Relative Container
+
+<div class="absolute">
+Absolute
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>8. display:flex</h2>
+
+<div class="flex">
+
+<div class="item">1</div>
+
+<div class="item">2</div>
+
+<div class="item">3</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>9. flex-direction</h2>
+
+<h3>Row</h3>
+
+<div class="flex row">
+
+<div class="item">A</div>
+
+<div class="item">B</div>
+
+<div class="item">C</div>
+
+</div>
+
+<h3>Column</h3>
+
+<div class="flex column">
+
+<div class="item">A</div>
+
+<div class="item">B</div>
+
+<div class="item">C</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>10. justify-content</h2>
+
+<h3>Center</h3>
+
+<div class="flex center">
+
+<div class="item">1</div>
+
+<div class="item">2</div>
+
+<div class="item">3</div>
+
+</div>
+
+<h3>Space Between</h3>
+
+<div class="flex between">
+
+<div class="item">1</div>
+
+<div class="item">2</div>
+
+<div class="item">3</div>
+
+</div>
+
+<h3>Space Around</h3>
+
+<div class="flex around">
+
+<div class="item">1</div>
+
+<div class="item">2</div>
+
+<div class="item">3</div>
+
+</div>
+
+<h3>Space Evenly</h3>
+
+<div class="flex evenly">
+
+<div class="item">1</div>
+
+<div class="item">2</div>
+
+<div class="item">3</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>11. flex-wrap</h2>
+
+<div class="flex wrap">
+
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+<div class="item">4</div>
+<div class="item">5</div>
+<div class="item">6</div>
+<div class="item">7</div>
+<div class="item">8</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>12. align-items</h2>
+
+<div class="flex align">
+
+<div class="item">A</div>
+
+<div class="item">B</div>
+
+<div class="item">C</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>13. align-self</h2>
+
+<div class="flex align">
+
+<div class="item">1</div>
+
+<div class="item self">align-self</div>
+
+<div class="item">3</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>14. flex-flow</h2>
+
+<div class="flex flow">
+
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+<div class="item">4</div>
+<div class="item">5</div>
+<div class="item">6</div>
+<div class="item">7</div>
+<div class="item">8</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>15. justify-self</h2>
+
+<p>
+<strong>Observação:</strong> <code>justify-self</code> <b>não funciona em Flexbox</b>. Essa propriedade é destinada ao <strong>CSS Grid</strong>. Em containers Flexbox, usa-se <code>justify-content</code>, <code>align-items</code> e <code>align-self</code>.
+</p>
+
+</section>
+
+<div class="fixed">
+Fixed Position
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HTML5 Drag & Drop Playground</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>HTML5 Drag & Drop Playground</h1>
+<p>Learn the HTML5 Drag and Drop API by experimenting.</p>
+</header>
+
+<main>
+<section class="demo">
+<h2>Basic Demo</h2>
+<div id="drag1" class="item" draggable="true">📦 Drag me</div>
+<div id="dropzone" class="dropzone">Drop here</div>
+<p id="status">Status: waiting...</p>
+</section>
+
+<section>
+<h2>Events</h2>
+<table>
+<thead><tr><th>Event</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>dragstart</td><td>Starts dragging.</td></tr>
+<tr><td>dragover</td><td>Allows dropping.</td></tr>
+<tr><td>drop</td><td>Item released.</td></tr>
+<tr><td>dragend</td><td>Drag finished.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Use Cases</h2>
+<ul>
+<li>Kanban boards</li>
+<li>Shopping carts</li>
+<li>File upload</li>
+<li>Educational games</li>
+</ul>
+</section>
+</main>
+
+<footer>Educational project inspired by IBM Skills Network.</footer>
+<script src="script.js"></script>
+</body>
+</html>

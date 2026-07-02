@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Advanced CSS Properties - Flexbox Demo</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    margin:30px;
+    line-height:1.6;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+section{
+    background:white;
+    margin:25px 0;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+/*--------------------------------*/
+/* text-decoration                */
+/*--------------------------------*/
+
+.none{
+    text-decoration:none;
+}
+
+.underline{
+    text-decoration:underline;
+}
+
+.overline{
+    text-decoration:overline;
+}
+
+.line{
+    text-decoration:line-through;
+}
+
+/*--------------------------------*/
+/* font-weight                    */
+/*--------------------------------*/
+
+.light{
+    font-weight:300;
+}
+
+.normal{
+    font-weight:400;
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.heavy{
+    font-weight:900;
+}
+
+/*--------------------------------*/
+/* margin padding                 */
+/*--------------------------------*/
+
+.box{
+    background:#4CAF50;
+    color:white;
+    width:180px;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+/*--------------------------------*/
+/* float                          */
+/*--------------------------------*/
+
+.float-image{
+    float:left;
+    margin-right:20px;
+    border-radius:10px;
+}
+
+.clear{
+    clear:both;
+}
+
+/*--------------------------------*/
+/* width height                   */
+/*--------------------------------*/
+
+.size-demo{
+    width:300px;
+    height:100px;
+    background:#2196F3;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+}
+
+/*--------------------------------*/
+/* position                       */
+/*--------------------------------*/
+
+.relative-box{
+
+    position:relative;
+
+    width:320px;
+    height:180px;
+
+    background:#DDD;
+
+    border-radius:10px;
+
+}
+
+.absolute-box{
+
+    position:absolute;
+
+    right:10px;
+    bottom:10px;
+
+    background:red;
+    color:white;
+
+    padding:10px;
+    border-radius:10px;
+
+}
+
+.fixed-box{
+
+    position:fixed;
+
+    bottom:20px;
+    right:20px;
+
+    background:#222;
+    color:white;
+
+    padding:12px;
+    border-radius:50px;
+
+}
+
+.sticky-box{
+
+    position:sticky;
+    top:0;
+
+    background:orange;
+    padding:10px;
+    margin-bottom:20px;
+    border-radius:8px;
+}
+
+/*--------------------------------*/
+/* FLEXBOX                        */
+/*--------------------------------*/
+
+.flex{
+
+    display:flex;
+
+    background:#EEE;
+
+    padding:15px;
+
+    gap:10px;
+
+}
+
+.item{
+
+    background:#1976D2;
+    color:white;
+
+    width:100px;
+    height:80px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:8px;
+
+}
+
+/* justify-content */
+
+.start{
+    justify-content:flex-start;
+}
+
+.center{
+    justify-content:center;
+}
+
+.end{
+    justify-content:flex-end;
+}
+
+.between{
+    justify-content:space-between;
+}
+
+.around{
+    justify-content:space-around;
+}
+
+.evenly{
+    justify-content:space-evenly;
+}
+
+/* flex-direction */
+
+.column{
+    flex-direction:column;
+    height:320px;
+}
+
+/* wrap */
+
+.wrap{
+
+    flex-flow:row wrap;
+
+}
+
+.wrap .item{
+
+    width:180px;
+
+}
+
+.align-demo{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-around;
+
+    height:200px;
+
+    background:#EEE;
+
+}
+
+.small{
+
+    height:50px;
+
+}
+
+.medium{
+
+    height:100px;
+
+}
+
+.large{
+
+    height:150px;
+
+}
+
+.self{
+
+    align-self:flex-end;
+    background:crimson;
+
+}
+
+footer{
+
+    margin-top:80px;
+    text-align:center;
+    color:gray;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sticky-box">
+Sticky Header (position:sticky)
+</div>
+
+<h1>Advanced CSS Properties Demo</h1>
+
+<section>
+
+<h2>Text Decoration</h2>
+
+<p class="none">No Decoration</p>
+<p class="underline">Underline</p>
+<p class="overline">Overline</p>
+<p class="line">Line Through</p>
+
+</section>
+
+<section>
+
+<h2>Font Weight</h2>
+
+<p class="light">Weight 300</p>
+<p class="normal">Weight 400</p>
+<p class="bold">Bold</p>
+<p class="heavy">Weight 900</p>
+
+</section>
+
+<section>
+
+<h2>Margin + Padding + Border Radius</h2>
+
+<div class="box">
+Margin 20px<br>
+Padding 20px<br>
+Border Radius 10px
+</div>
+
+</section>
+
+<section>
+
+<h2>Float</h2>
+
+<img
+class="float-image"
+src="https://picsum.photos/150"
+alt=""
+>
+
+<p>
+
+This paragraph wraps around the image because the image
+uses <strong>float:left</strong>. This was the traditional
+way of creating layouts before Flexbox and CSS Grid.
+
+</p>
+
+<div class="clear"></div>
+
+</section>
+
+<section>
+
+<h2>Width & Height</h2>
+
+<div class="size-demo">
+300px × 100px
+</div>
+
+</section>
+
+<section>
+
+<h2>Position Relative + Absolute</h2>
+
+<div class="relative-box">
+
+<div class="absolute-box">
+
+Absolute
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>display:flex + justify-content:flex-start</h2>
+
+<div class="flex start">
+
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>justify-content:center</h2>
+
+<div class="flex center">
+
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>justify-content:flex-end</h2>
+
+<div class="flex end">
+
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>justify-content:space-between</h2>
+
+<div class="flex between">
+
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>justify-content:space-around</h2>
+
+<div class="flex around">
+
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>justify-content:space-evenly</h2>
+
+<div class="flex evenly">
+
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>flex-direction:column</h2>
+
+<div class="flex column">
+
+<div class="item">A</div>
+<div class="item">B</div>
+<div class="item">C</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>flex-wrap + flex-flow</h2>
+
+<div class="flex wrap">
+
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item">3</div>
+<div class="item">4</div>
+<div class="item">5</div>
+<div class="item">6</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>align-items + align-self</h2>
+
+<div class="align-demo">
+
+<div class="item small">50</div>
+
+<div class="item medium">
+100
+</div>
+
+<div class="item large">
+150
+</div>
+
+<div class="item self">
+Self
+</div>
+
+</div>
+
+</section>
+
+<div class="fixed-box">
+Fixed
+</div>
+
+<footer>
+
+Advanced CSS Properties Demo<br>
+IBM Skills Network - HTML & CSS Lab
+
+</footer>
+
+</body>
+</html>

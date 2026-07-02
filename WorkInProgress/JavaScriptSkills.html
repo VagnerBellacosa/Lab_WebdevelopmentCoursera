@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JavaScript Skills Lab</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial;
+    background:#eef3f8;
+    padding:30px;
+    line-height:1.6;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:30px;
+}
+
+section{
+
+    background:white;
+    margin-bottom:25px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+}
+
+h2{
+    color:#0d6efd;
+}
+
+button{
+
+    margin-top:15px;
+    padding:10px 20px;
+    background:#0d6efd;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:#084298;
+
+}
+
+pre{
+
+    margin-top:15px;
+    background:#222;
+    color:#00ff88;
+    padding:15px;
+    border-radius:8px;
+    white-space:pre-wrap;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>JavaScript Skills Lab</h1>
+
+<p>
+
+Exercises using Arrays, Objects, Loops, Functions and Conditions
+
+</p>
+
+</header>
+
+<!-- ================================================= -->
+
+<section>
+
+<h2>Exercise 1 - Calculate Total Sales</h2>
+
+<p>
+Calculate the total amount of all sales.
+</p>
+
+<button onclick="exercise1()">
+
+Run Exercise
+
+</button>
+
+<pre id="out1"></pre>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<h2>Exercise 2 - Order Receipt</h2>
+
+<p>
+
+Generate a complete receipt.
+
+</p>
+
+<button onclick="exercise2()">
+
+Run Exercise
+
+</button>
+
+<pre id="out2"></pre>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<h2>Exercise 3 - Password Validation</h2>
+
+<p>
+
+Validate multiple passwords.
+
+</p>
+
+<button onclick="exercise3()">
+
+Run Exercise
+
+</button>
+
+<pre id="out3"></pre>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<h2>Exercise 4 - Stock Levels</h2>
+
+<p>
+
+Check inventory stock.
+
+</p>
+
+<button onclick="exercise4()">
+
+Run Exercise
+
+</button>
+
+<pre id="out4"></pre>
+
+</section>
+
+<script>
+
+/****************************************************
+Exercise 1
+****************************************************/
+
+function exercise1(){
+
+const sales=[
+
+{item:"Notebook",quantity:2,price:3500},
+
+{item:"Mouse",quantity:5,price:90},
+
+{item:"Keyboard",quantity:3,price:180}
+
+];
+
+let total=0;
+
+for(let sale of sales){
+
+total+=sale.quantity*sale.price;
+
+}
+
+document.getElementById("out1").textContent=
+
+"Total Sales = $"+total.toFixed(2);
+
+}
+
+/****************************************************
+Exercise 2
+****************************************************/
+
+function exercise2(){
+
+const order=[
+
+{item:"Notebook",quantity:2,price:3500},
+
+{item:"Mouse",quantity:5,price:90},
+
+{item:"Keyboard",quantity:3,price:180}
+
+];
+
+let receipt="";
+
+let total=0;
+
+for(let product of order){
+
+let subtotal=product.quantity*product.price;
+
+receipt+=
+
+product.item+
+
+" | Qty:"+product.quantity+
+
+" | Price:$"+product.price+
+
+" | Total:$"+subtotal+"\n";
+
+total+=subtotal;
+
+}
+
+receipt+="----------------------------\n";
+
+receipt+="Grand Total = $"+total;
+
+document.getElementById("out2").textContent=receipt;
+
+}
+
+/****************************************************
+Exercise 3
+****************************************************/
+
+function exercise3(){
+
+const passwords=[
+
+"abc123",
+
+"MyPassword99",
+
+"12345678",
+
+"Password_123",
+
+"JavaScript2025"
+
+];
+
+let result="";
+
+const regex=/^[A-Za-z0-9]{8,20}$/;
+
+for(let pass of passwords){
+
+if(regex.test(pass))
+
+result+=pass+" ✔ VALID\n";
+
+else
+
+result+=pass+" ❌ INVALID\n";
+
+}
+
+document.getElementById("out3").textContent=result;
+
+}
+
+/****************************************************
+Exercise 4
+****************************************************/
+
+function exercise4(){
+
+const products=[
+
+{product:"Notebook",stock:12},
+
+{product:"Mouse",stock:0},
+
+{product:"Keyboard",stock:8},
+
+{product:"Monitor",stock:0}
+
+];
+
+let result="";
+
+for(let item of products){
+
+if(item.stock>0)
+
+result+=item.product+" → In Stock ("+item.stock+")\n";
+
+else
+
+result+=item.product+" → Out of Stock\n";
+
+}
+
+document.getElementById("out4").textContent=result;
+
+}
+
+</script>
+
+</body>
+
+</html>

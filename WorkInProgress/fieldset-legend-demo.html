@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HTML Fieldset & Legend Demo</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#ECEFF1;
+
+    margin:30px;
+
+}
+
+h1{
+
+    text-align:center;
+
+    color:#1565C0;
+
+}
+
+form{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 20px rgba(0,0,0,.15);
+
+}
+
+fieldset{
+
+    margin-bottom:25px;
+
+    padding:20px;
+
+    border:2px solid #2196F3;
+
+    border-radius:10px;
+
+}
+
+legend{
+
+    padding:0 10px;
+
+    font-weight:bold;
+
+    color:#1565C0;
+
+    font-size:18px;
+
+}
+
+.row{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:15px;
+
+}
+
+.column{
+
+    flex:1;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:5px;
+
+    font-weight:bold;
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:10px;
+
+    border:1px solid #CCC;
+
+    border-radius:5px;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+}
+
+.buttons{
+
+    text-align:center;
+
+}
+
+button{
+
+    padding:12px 25px;
+
+    font-size:16px;
+
+    margin:5px;
+
+    cursor:pointer;
+
+}
+
+.submit{
+
+    background:#2196F3;
+
+    color:white;
+
+    border:none;
+
+}
+
+.reset{
+
+    background:#757575;
+
+    color:white;
+
+    border:none;
+
+}
+
+fieldset:disabled{
+
+    opacity:.6;
+
+}
+
+.info{
+
+    background:#E3F2FD;
+
+}
+
+.personal{
+
+    background:#FFF8E1;
+
+}
+
+.professional{
+
+    background:#E8F5E9;
+
+}
+
+.login{
+
+    background:#F3E5F5;
+
+}
+
+.admin{
+
+    background:#FFEBEE;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>HTML Fieldset & Legend Demonstration</h1>
+
+<form>
+
+<!-- ================================= -->
+
+<fieldset
+class="info"
+name="information">
+
+<legend>Form Information</legend>
+
+<p>
+
+This page demonstrates the use of:
+
+</p>
+
+<ul>
+
+<li>&lt;form&gt;</li>
+
+<li>&lt;fieldset&gt;</li>
+
+<li>&lt;legend&gt;</li>
+
+<li>name attribute</li>
+
+<li>disabled attribute</li>
+
+<li>Various input controls</li>
+
+</ul>
+
+</fieldset>
+
+<!-- ================================= -->
+
+<fieldset
+class="personal"
+name="personal_details">
+
+<legend>Personal Details</legend>
+
+<div class="row">
+
+<div class="column">
+
+<label>First Name</label>
+
+<input
+type="text"
+placeholder="John">
+
+</div>
+
+<div class="column">
+
+<label>Last Name</label>
+
+<input
+type="text"
+placeholder="Smith">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="column">
+
+<label>Email</label>
+
+<input
+type="email"
+placeholder="john@email.com">
+
+</div>
+
+<div class="column">
+
+<label>Phone</label>
+
+<input
+type="tel"
+placeholder="+1 555 123456">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="column">
+
+<label>Birth Date</label>
+
+<input
+type="date">
+
+</div>
+
+<div class="column">
+
+<label>Gender</label>
+
+<select>
+
+<option>Male</option>
+
+<option>Female</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+</div>
+
+</fieldset>
+
+<!-- ================================= -->
+
+<fieldset
+class="professional"
+name="professional_details">
+
+<legend>Professional Details</legend>
+
+<div class="row">
+
+<div class="column">
+
+<label>Occupation</label>
+
+<input
+type="text">
+
+</div>
+
+<div class="column">
+
+<label>Company</label>
+
+<input
+type="text">
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="column">
+
+<label>Start Date</label>
+
+<input
+type="date">
+
+</div>
+
+<div class="column">
+
+<label>End Date</label>
+
+<input
+type="date">
+
+</div>
+
+</div>
+
+<label>Professional Summary</label>
+
+<textarea
+rows="5">
+
+</textarea>
+
+</fieldset>
+
+<!-- ================================= -->
+
+<fieldset
+class="login"
+name="login_information">
+
+<legend>Login Information</legend>
+
+<div class="row">
+
+<div class="column">
+
+<label>Username</label>
+
+<input
+type="text">
+
+</div>
+
+<div class="column">
+
+<label>Password</label>
+
+<input
+type="password">
+
+</div>
+
+</div>
+
+</fieldset>
+
+<!-- ================================= -->
+
+<fieldset
+class="admin"
+name="administrator"
+disabled>
+
+<legend>Administrator Area (Disabled)</legend>
+
+<div class="row">
+
+<div class="column">
+
+<label>Admin Code</label>
+
+<input
+type="text">
+
+</div>
+
+<div class="column">
+
+<label>Security Key</label>
+
+<input
+type="password">
+
+</div>
+
+</div>
+
+<p>
+
+This entire fieldset is disabled.
+
+</p>
+
+</fieldset>
+
+<!-- ================================= -->
+
+<div class="buttons">
+
+<button
+class="submit"
+type="submit">
+
+Submit
+
+</button>
+
+<button
+class="reset"
+type="reset">
+
+Reset
+
+</button>
+
+</div>
+
+</form>
+
+</body>
+
+</html>

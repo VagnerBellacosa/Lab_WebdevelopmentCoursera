@@ -1,0 +1,1 @@
+console.log('HTML5 Playground loaded');

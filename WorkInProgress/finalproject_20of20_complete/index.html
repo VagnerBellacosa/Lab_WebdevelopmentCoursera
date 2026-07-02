@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vagner Bellacosa - Portfolio</title>
+
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+
+<!-- ******************************
+     NAVIGATION
+********************************-->
+
+<nav>
+
+<div id="home">
+
+<div class="profile_name">
+
+Vagner Bellacosa
+
+<div class="contact_info">
+<img src="html_finalprojimages/envelope.png"/>
+vagner.bellacosa@email.com
+</div>
+
+<div style="clear:both;"></div>
+
+<div class="contact_info">
+<img src="html_finalprojimages/phone.png"/>
++55 (11) 99999-9999
+</div>
+
+</div>
+
+<div class="topdiv">
+
+<a class="topmenu" href="#about-me">About Me</a>
+
+<a class="topmenu" href="#skills">Skills</a>
+
+<a class="topmenu" href="#projects">Project Details</a>
+
+<a class="topmenu" href="#recommendations">Recommendations</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- ******************************
+     ABOUT ME
+********************************-->
+
+<section id="about-me" class="container">
+
+<div>
+
+<img
+class="profile_image"
+src="html_finalprojimages/profile.png"
+alt="Vagner Bellacosa">
+
+</div>
+
+<div>
+
+<h1>
+
+Hi, I'm Vagner Bellacosa!
+
+<img
+src="html_finalprojimages/waving-hand.png"
+width="60"/>
+
+</h1>
+
+<p>
+
+I am an IBM Mainframe Specialist with extensive experience in COBOL,
+CICS, DB2, JCL, z/OS, Java and enterprise modernization.
+I enjoy designing secure, scalable enterprise applications and
+sharing technical knowledge through articles, courses and mentoring.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ******************************
+     SKILLS
+********************************-->
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div style="clear:both;"></div>
+
+<div class="all_skills">
+
+<div class="skill">
+
+<img src="html_finalprojimages/html5.png"/>
+
+<h6>HTML</h6>
+
+<p>3 years experience</p>
+
+</div>
+
+<div class="skill">
+
+<img src="html_finalprojimages/js.jpeg"/>
+
+<h6>JavaScript</h6>
+
+<p>3 years experience</p>
+
+</div>
+
+<div class="skill">
+
+<img src="html_finalprojimages/CSS3.png"/>
+
+<h6>CSS3</h6>
+
+<p>3 years experience</p>
+
+</div>
+
+<div class="skill">
+
+<img src="html_finalprojimages/java.png"/>
+
+<h6>Java</h6>
+
+<p>4 years experience</p>
+
+</div>
+
+<div class="skill">
+
+<img src="html_finalprojimages/node.png"/>
+
+<h6>Node.js</h6>
+
+<p>2 years experience</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ******************************
+     PROJECTS
+********************************-->
+
+<section class="projects" id="projects">
+
+<h2>Project Details</h2>
+
+<div style="clear:both;"></div>
+
+<div id="projects-container" class="projects-container">
+
+<div class="project-card">
+
+<h3>IBM Z Banking Platform</h3>
+
+<ul>
+<li>
+Designed and developed a secure enterprise banking application using
+COBOL, CICS, DB2 and JCL running on IBM Z.
+</li>
+</ul>
+
+</div>
+
+<hr>
+
+<div class="project-card">
+
+<h3>Enterprise Inventory Management</h3>
+
+<ul>
+<li>
+Created a responsive inventory management system using HTML, CSS,
+JavaScript and REST APIs with responsive dashboards.
+</li>
+</ul>
+
+</div>
+
+<hr>
+
+<div class="project-card">
+
+<h3>Mainframe Learning Portal</h3>
+
+<ul>
+<li>
+Developed an online learning portal containing interactive quizzes,
+labs and technical documentation focused on IBM Mainframe technologies.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<div style="clear:both;"></div>
+
+<!-- ******************************
+     RECOMMENDATIONS
+********************************-->
+
+<section id="recommendations">
+
+<h2>Recommendations</h2>
+
+<div style="clear:both;"></div>
+
+<div class="all_recommendations" id="all_recommendations">
+
+<div class="recommendation">
+
+<span>&#8220;</span>
+
+Vagner is an outstanding IBM Mainframe professional. His technical
+knowledge, commitment and attention to detail consistently produce
+high-quality solutions for enterprise environments.
+
+<span>&#8221;</span>
+
+</div>
+
+<div class="recommendation">
+
+<span>&#8220;</span>
+
+Working with Vagner has always been a great experience. He communicates
+clearly, shares knowledge with the team and delivers projects on time
+with exceptional quality.
+
+<span>&#8221;</span>
+
+</div>
+
+<div class="recommendation">
+
+<span>&#8220;</span>
+
+Vagner combines strong problem-solving skills with deep experience in
+COBOL, CICS, DB2 and Java. He is an excellent mentor and a valuable
+professional for any software engineering team.
+
+<span>&#8221;</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ******************************
+     RECOMMENDATION FORM
+********************************-->
+
+<section id="contact">
+
+<div class="flex_center">
+
+<fieldset>
+
+<legend class="introduction">
+Leave a Recommendation
+</legend>
+
+<input
+type="text"
+placeholder="Name (Optional)">
+
+<br/>
+
+<textarea
+id="new_recommendation"
+cols="500"
+rows="10"
+placeholder="Message">
+</textarea>
+
+<div class="flex_center">
+
+<button
+id="recommend_btn"
+onclick="addRecommendation()">
+
+Submit
+
+</button>
+
+</div>
+
+</fieldset>
+
+</div>
+
+</section>
+
+<!-- ******************************
+     HOME ICON
+********************************-->
+
+<div class="iconbutton">
+
+<a href="#home">
+
+<img
+src="html_finalprojimages/home.png"
+alt="Home">
+
+</a>
+
+</div>
+
+<!-- ******************************
+     POPUP
+********************************-->
+
+<div
+class="popup"
+id="popup">
+
+<img src="html_finalprojimages/checkmark--outline.svg"/>
+
+<h3>
+
+Thank you for submitting a recommendation!
+
+</h3>
+
+<button onclick="showPopup(false)">
+
+Ok
+
+</button>
+
+</div>
+
+</body>
+
+</html>

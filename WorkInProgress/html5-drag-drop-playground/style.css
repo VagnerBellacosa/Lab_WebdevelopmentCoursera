@@ -1,0 +1,8 @@
+body{font-family:Arial;margin:0;background:#eef;line-height:1.5}
+header,footer{background:#0b5ed7;color:#fff;text-align:center;padding:20px}
+main{max-width:900px;margin:auto;padding:20px}
+.demo{display:flex;flex-direction:column;gap:15px}
+.item{width:180px;padding:15px;background:#ffc107;border-radius:8px;cursor:grab}
+.dropzone{min-height:120px;border:3px dashed #0b5ed7;background:#fff;padding:20px;border-radius:8px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #ccc;padding:8px}

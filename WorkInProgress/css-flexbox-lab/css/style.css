@@ -1,0 +1,17 @@
+body{font-family:Arial;margin:20px}
+section{margin:30px 0}
+.underline{text-decoration:underline}.bold{font-weight:bold}
+.box{border:1px solid;padding:10px;margin:10px 0}
+.padding{padding:30px}.margin{margin:30px}
+.float{float:left;margin:10px}
+.rounded{background:#0d6efd;color:#fff;padding:20px;border-radius:16px;display:inline-block}
+.size{width:220px;height:80px;background:#ddd;margin:20px 0}
+.relative{position:relative;height:120px;border:1px solid}
+.absolute{position:absolute;right:10px;bottom:10px;background:orange;padding:5px}
+.sticky{position:sticky;top:0;background:#333;color:#fff;padding:8px}
+.flex{display:flex;gap:10px;margin:20px 0}
+.flex>div{background:#4caf50;color:#fff;padding:15px}
+.column{flex-direction:column}
+.wrap{flex-wrap:wrap}
+.center{justify-content:center;align-items:center;height:120px;border:1px solid}
+.self{align-self:flex-end;background:#f44336}

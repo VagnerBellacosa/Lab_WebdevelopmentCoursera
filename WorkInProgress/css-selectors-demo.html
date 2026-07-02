@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSS Selectors Demo</title>
+
+<style>
+
+/* =======================================
+   TAG SELECTORS
+======================================= */
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eeeeee;
+    margin:30px;
+}
+
+h1{
+    color:navy;
+    text-align:center;
+}
+
+h2{
+    color:darkred;
+}
+
+p{
+    color:#444;
+}
+
+/* =======================================
+   ID SELECTORS
+======================================= */
+
+#header{
+
+    background:#1E88E5;
+    color:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+}
+
+#footer{
+
+    background:#222;
+    color:white;
+
+    padding:20px;
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+/* =======================================
+   CLASS SELECTORS
+======================================= */
+
+.card{
+
+    background:white;
+
+    padding:20px;
+
+    margin:20px 0;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+
+}
+
+.highlight{
+
+    background:gold;
+
+}
+
+.center{
+
+    text-align:center;
+
+}
+
+.big{
+
+    font-size:24px;
+
+}
+
+.bold{
+
+    font-weight:bold;
+
+}
+
+.red{
+
+    color:red;
+
+}
+
+.blue{
+
+    color:blue;
+
+}
+
+.shadow{
+
+    box-shadow:0 0 15px gray;
+
+}
+
+/* =======================================
+   TAG + CLASS
+======================================= */
+
+p.highlight{
+
+    border-left:8px solid orange;
+
+    padding:10px;
+
+}
+
+/* =======================================
+   TAG + ID
+======================================= */
+
+div#menu{
+
+    background:#444;
+
+    color:white;
+
+    padding:15px;
+
+    margin:20px 0;
+
+}
+
+/* =======================================
+   PRIORITY DEMO
+======================================= */
+
+.demo{
+
+    color:green;
+
+}
+
+#priority{
+
+    color:red;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header">
+
+<h1>CSS Selectors Demonstration</h1>
+
+<p>Example using Tags, IDs and Classes</p>
+
+</div>
+
+<div id="menu">
+
+Home |
+Products |
+Services |
+Contact
+
+</div>
+
+<div class="card">
+
+<h2>1 - Tag Selector</h2>
+
+<p>
+
+This paragraph is styled using the
+<strong>p</strong> selector.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>2 - ID Selector</h2>
+
+<p>
+
+The Header, Menu and Footer are styled using IDs.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>3 - Class Selector</h2>
+
+<p class="highlight">
+
+This paragraph uses class
+<strong>.highlight</strong>
+
+</p>
+
+<p class="highlight">
+
+Another element using the same class.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>4 - Multiple Classes</h2>
+
+<p class="highlight center big bold">
+
+This paragraph has FOUR classes.
+
+</p>
+
+<p class="blue bold">
+
+Blue + Bold
+
+</p>
+
+<p class="red big">
+
+Red + Big
+
+</p>
+
+</div>
+
+<div class="card shadow">
+
+<h2>5 - Reusable Class</h2>
+
+<p>
+
+The class
+<strong>.shadow</strong>
+can be reused on any element.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>6 - Tag + Class</h2>
+
+<p class="highlight">
+
+This selector is:
+
+</p>
+
+<pre>
+
+p.highlight
+
+</pre>
+
+</div>
+
+<div class="card">
+
+<h2>7 - Tag + ID</h2>
+
+<p>
+
+The selector used is:
+
+</p>
+
+<pre>
+
+div#menu
+
+</pre>
+
+</div>
+
+<div class="card">
+
+<h2>8 - CSS Specificity</h2>
+
+<p
+id="priority"
+class="demo">
+
+This text is RED because the ID selector
+has higher priority than the class selector.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>9 - Summary</h2>
+
+<table border="1" cellpadding="10">
+
+<tr>
+
+<th>Selector</th>
+
+<th>Example</th>
+
+<th>Description</th>
+
+</tr>
+
+<tr>
+
+<td>Tag</td>
+
+<td>p</td>
+
+<td>Styles every paragraph</td>
+
+</tr>
+
+<tr>
+
+<td>ID</td>
+
+<td>#header</td>
+
+<td>Styles one unique element</td>
+
+</tr>
+
+<tr>
+
+<td>Class</td>
+
+<td>.card</td>
+
+<td>Reusable style</td>
+
+</tr>
+
+<tr>
+
+<td>Tag + Class</td>
+
+<td>p.highlight</td>
+
+<td>Only highlighted paragraphs</td>
+
+</tr>
+
+<tr>
+
+<td>Tag + ID</td>
+
+<td>div#menu</td>
+
+<td>Specific div with id="menu"</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div id="footer">
+
+IBM Skills Network • CSS Selectors Lab
+
+</div>
+
+</body>
+
+</html>
